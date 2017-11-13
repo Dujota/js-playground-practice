@@ -116,9 +116,52 @@ person.children.forEach((child) => {return console.log(child);
 person.children.map((child) => {return console.log(child);
 });
 
+person.children.filter((child) => {
+  return console.log(child);
+});
+
 console.log(`access the imbedded object using person.object ${person.address}`);
 console.log(person.address);
 console.log(person.address.state);
 
 // if calling the function back from the object we need to invoke it with function ()
 console.log(person.full_name());
+
+
+// Object Constructor
+
+const apple = new Object();  // creates the object like in ruby class
+apple.color = 'red';  // this gives the object some properties like @variable in ruby class
+apple.shape = 'round';
+
+apple.describe = function() {
+  return `An apple is the color ${this.color} and is the shape ${this.shape}`;
+};  // we can imbed functions to the object and ivoke it later
+
+console.log(apple);
+console.log(apple.red);
+console.log(apple.shape);
+console.log(apple.describe()); // we need to invoke it as well
+
+// downfall is that we need to build a new fruit every time and give it properties, there is a simpler way to create objects (classes) using Constructor pattern
+
+
+// Constructor Pattern
+
+// parameters passed in will be the properties of the new object (class) works like initialize
+function Fruit(name, color, shape) {
+  this.name = name
+  this.color = color
+  this.shape = shape
+  // same way we enbedded a function we can call it or describe the function any way we want as a property of the object and can be dynamic when we create different instances of that object
+  this.describe = function () {
+    return `A ${this.name} is the color ${this.color} is the shape ${this.shape}`
+  }
+}
+
+const apple2 = new Fruit('apple', 'red', 'round')
+const melon = new Fruit('melon', 'green', 'oval')
+console.log(apple2);
+
+console.log(apple2.describe());
+console.log(melon.describe());
