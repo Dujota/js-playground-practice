@@ -107,10 +107,18 @@ console.log(`We access the properties of an object by using the .property, this 
 
 console.log(`access the children array inside person object using person.children[index] ${person.children[0]}`);
 
-// if calling the function back from the object we need to invoke it with function ()
-console.log();
+// we can loop through the imbedded array
+// forEach
+person.children.forEach((child) => {return console.log(child);
+});
 
+//
+person.children.map((child) => {return console.log(child);
+});
 
 console.log(`access the imbedded object using person.object ${person.address}`);
 console.log(person.address);
 console.log(person.address.state);
+
+// if calling the function back from the object we need to invoke it with function ()
+console.log(person.full_name());
