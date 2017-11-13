@@ -23,8 +23,17 @@
       <!-- changing the contents of a different element by invoking a function that selects the id of the a different html element, we are using document.getElementById -->
       <button onclick="change_heading()"> change the heading </button>
 
+    <!-- we set an empty element that we can manipulate using getElementById('time') and when the button is clicked we invoke the show_date() function that will change the innerHTML with the Date(); function -->
       <button onclick="show_date()">Show Date</button>
+
+
+    <!-- we will do the same thing as the above button but instead of clicking it will be on mouse over and on mouseout which will call a new function that resets the h1 to be empty -->
+    <button onmouseout="clear_date()" onmouseover="show_date()">Mouse Over Shows Date</button>
+
+
+      <h1 id="time"></h1>
     </div>
+
 
   <script src="main.js" type="text/javascript"></script>
   </body>

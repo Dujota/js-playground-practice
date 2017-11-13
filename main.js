@@ -234,3 +234,15 @@ function change_heading() {
   let heading = document.getElementById('heading');
   heading.innerHTML = "Learning Javascrtipt is Fun!!! - Changed the heading"
 }
+
+// for the show date buttons
+function show_date() {
+  let time = document.getElementById('time');
+  time.innerHTML = Date();
+}
+
+// clears the date display onmouseout
+function clear_date() {
+  let clear_time = document.getElementById('time');
+  time.innerHTML = '';
+}
