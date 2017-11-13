@@ -216,3 +216,21 @@ console.log(`--------------`);
 
 
 // EVENTS!!! the most important part to know, this is what makes the javascript language so good to make webpages interactive
+
+function do_click() {
+  alert('you clicked');
+}
+
+
+// in this function we pass in an argument, which is referenced as 'this' on the html tag, when we invoke, this will reference the html tag and we pass it to this function.
+
+// changing the innerHTML
+function change_text(id) {
+  id.innerHTML = 'You Clicked me';
+}
+
+// selecting the specific tag by id
+function change_heading() {
+  let heading = document.getElementById('heading');
+  heading.innerHTML = "Learning Javascrtipt is Fun!!! - Changed the heading"
+}

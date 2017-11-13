@@ -9,12 +9,21 @@
   </head>
   <body>
     <div class="header">
-      <h1>Learning Javascript</h1>
+      <h1 id="heading" >Learning Javascript</h1>
       <p>Check Console Log in Dev tools for magic! </p>
     </div>
 
     <div class='container'>
-      <button> Click me</button>
+      <!-- in order for the event listener to work we need to invove the function with do_click() -->
+      <button onclick="do_click()"> Click me</button>
+
+      <!-- we need to pass in "this" button to the function being invoked so that it knows what to change  -->
+      <button onclick="change_text(this)"> Clicking this will change the text</button>
+
+      <!-- changing the contents of a different element by invoking a function that selects the id of the a different html element, we are using document.getElementById -->
+      <button onclick="change_heading()"> change the heading </button>
+
+      <button onclick="show_date()">Show Date</button>
     </div>
 
   <script src="main.js" type="text/javascript"></script>
