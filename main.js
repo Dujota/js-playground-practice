@@ -159,9 +159,60 @@ function Fruit(name, color, shape) {
   }
 }
 
+// we just do one line of code instead of the object Constructor
 const apple2 = new Fruit('apple', 'red', 'round')
 const melon = new Fruit('melon', 'green', 'oval')
 console.log(apple2);
 
 console.log(apple2.describe());
 console.log(melon.describe());
+
+
+// arrays of Objects
+
+const users = [
+  {
+    name: 'John Doe',
+    age: '30'
+  },
+  {
+    name: 'Mark Smith',
+    age: '44'
+  },
+  {
+    name: 'Shelly Williams',
+    age: '20'
+  }
+]
+// can use the same .attribute and loop methods we used above
+console.log(users);
+console.log(users[0]);
+console.log(users[0].name);
+
+console.log(`-----`);
+
+// es6 display n ECMAScript 2015 aka ES6, you can use a for..of loop to loop over an array of objects.
+//
+// for (let item of items) {
+//     console.log(item); // Will display contents of the object inside the array
+// }
+
+for (let user of users) {
+  console.log(user);
+}
+
+// we can then access the properties of each object as usual
+for (let user of users) {
+  console.log(user.name);
+  console.log(user.age);
+}
+
+console.log(`-------------`);
+// looping through the same array using forEach
+users.forEach((user) => {
+  console.log(user.name);
+});
+console.log(`--------------`);
+
+
+// EVENTS!!! the most important part to know, this is what makes the javascript language so good to make webpages interactive
